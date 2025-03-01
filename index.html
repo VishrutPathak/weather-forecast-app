@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Web App</title>
+  </head>
+  <body>
+    <h3>Vishrut's Weather App</h3><br><br>
+    <div class="container">
+      <div class="search-box">
+        <input type="text" id="city-input" placeholder="Search for any city..." />
+        <button onclick="getWeather()">Search</button>
+      </div>
+      <div class="error" id="error"></div>
+      <div class="loading" id="loading" style="display: none;">Fetching Weather data...</div>
+
+      <div class="weather-info" style="display: none;">
+        <div class="current-weather">
+          <h1 class="city-name" id="city-name">City Name</h1>
+          <p class="date" id="date">Date</p>
+          <p class="weather-description" id="weather-description">Weather Description</p>
+          <span class="temperature" id="temperature">0°C</span>
+          <img src="/api/placeholder/120/120" alt="Weather Icon" id="weather-icon" class="weather-icon" />
+        </div>
+      </div>
+
+      <div class="weather-detail">
+        <div class="detail-box">
+          <h3>Feels Like</h3>
+          <p id="feels-like">0°C</p>
+        </div>
+        <div class="detail-box">
+          <h3>Humidity</h3>
+          <p id="humidity">0%</p>
+        </div>
+        <div class="detail-box">
+          <h3>Wind Speed</h3>
+          <p id="wind-speed">0 km/h</p>
+        </div>
+        <div class="detail-box">
+          <h3>UV Index</h3>
+          <p id="uv-index">0</p>
+        </div>
+      </div>
+      <br><br>
+      <h2 class="section-title">Forecast</h2>
+      <div class="forecast" id="forecast"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
